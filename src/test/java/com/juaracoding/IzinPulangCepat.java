@@ -226,7 +226,9 @@ public class IzinPulangCepat {
 
     @Then("sistem menampilkan data izin pulang cepat dengan filter \"123\"")
     public void sistemmenampilkandepartemenTidakValid() {
-        System.out.println(izinPulangCepat.getTableRowText(1));
+        String tableRowText = izinPulangCepat.getTableRowText(1);
+        System.out.println(tableRowText);
+        Assert.assertNotNull(tableRowText, "Table should display all rows");
         extentTest.log(LogStatus.PASS, "Sistem menampilkan data izin pulang cepat dengan filter \"123\"");
     }
 

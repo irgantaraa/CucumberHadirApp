@@ -133,14 +133,14 @@ public class IzinPulangCepatPage {
         try {
             if (tableRows.isEmpty()) {
                 throw new NoSuchElementException("Table is empty, no rows available.");
-            }
+            } // Mengembalikan null jika tabel kosong
 
-            if (rowIndex >= 0 && rowIndex < tableRows.size()) {
-                return tableRows.get(rowIndex).getText();
+            if (rowIndex >= 0 && rowIndex < tableRows.size()) { // Memeriksa apakah indeks baris valid
+                return tableRows.get(rowIndex).getText(); // Mengembalikan teks dari baris yang valid
             } else {
-                throw new IndexOutOfBoundsException("Row index out of bounds: " + rowIndex);
+                throw new IndexOutOfBoundsException("Row index out of bounds: " + rowIndex); // Jika indeks baris tidak valid, lemparkan exception
             }
-        } catch (NoSuchElementException | IndexOutOfBoundsException e) {
+        } catch (NoSuchElementException | IndexOutOfBoundsException e) { // Menangkap exception jika terjadi kesalahan dan menampilkan pesan error
             System.out.println("Error: " + e.getMessage());
             return null; // Mengembalikan null atau nilai lain sesuai kebutuhan
         }

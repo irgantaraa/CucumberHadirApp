@@ -177,17 +177,17 @@ public class CutiPage {
         try {
             if (tableRows.isEmpty()) {
                 System.out.println("Table is empty. Ensure data is available for the given date range.");
-                return null;
+                return null; // Mengembalikan null jika tabel kosong
             }
 
-            if (rowIndex >= 0 && rowIndex < tableRows.size()) {
-                return tableRows.get(rowIndex).getText();
-            } else {
-                throw new IndexOutOfBoundsException("Row index out of bounds: " + rowIndex);
+            if (rowIndex >= 0 && rowIndex < tableRows.size()) { // Memeriksa apakah indeks baris valid
+                return tableRows.get(rowIndex).getText(); // Mengembalikan teks dari baris yang valid
+            } else { //
+                throw new IndexOutOfBoundsException("Row index out of bounds: " + rowIndex);  // Jika indeks baris tidak valid, lemparkan exception
             }
         } catch (NoSuchElementException | IndexOutOfBoundsException e) {
-            System.out.println("Error: " + e.getMessage());
-            return null;
+            System.out.println("Error: " + e.getMessage()); // Menangkap exception jika terjadi kesalahan dan menampilkan pesan error
+            return null; // Mengembalikan null jika terjadi error
         }
     }
 
