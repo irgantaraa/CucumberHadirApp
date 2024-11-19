@@ -55,33 +55,5 @@ public class Utils {
             System.out.println("No alert present: " + e.getMessage());
         }
     }
-
-    public static WebElement waitForElement(WebDriver driver, By locator, long timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    // Method to wait for an element to be clickable
-    public static boolean waitForElementToBeClickable(WebDriver driver, By locator, long timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(locator));
-            return true;
-        } catch (TimeoutException e) {
-            System.out.println("Element not clickable within " + timeoutInSeconds + " seconds: " + e.getMessage());
-            return false;
-        }
-    }
-
-    // Method to wait for an element to disappear
-    public static boolean waitForElementToDisappear(WebDriver driver, By locator, long timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
-        try {
-            return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
-        } catch (TimeoutException e) {
-            System.out.println("Element did not disappear within " + timeoutInSeconds + " seconds: " + e.getMessage());
-            return false;
-        }
-    }
 }
-}
+
