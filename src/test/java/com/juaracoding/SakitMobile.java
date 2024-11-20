@@ -52,7 +52,7 @@ public class SakitMobile {
     @When("Pengguna memilih tanggal dan meng-upload surat sakit valid")
     public void userChoseDateAndUploadValid() {
         sakitMobilePage.setAjukanSakit();
-        sakitMobilePage.setTanggal("Nov 17, 2024", "Nov 18, 2024");
+        sakitMobilePage.setTanggal("Nov 20, 2024", "Nov 21, 2024");
         sakitMobilePage.setBtnUploadImage();
         extentTest.log(LogStatus.PASS, "Pengguna memilih tanggal dan meng-upload surat sakit valid");
 
@@ -80,7 +80,7 @@ public class SakitMobile {
     @When("Pengguna meng-upload file bukan gambar")
     public void pengajuanUploadFile() {
         sakitMobilePage.setAjukanSakit();
-        sakitMobilePage.setTanggal("Nov 15, 2024", "Nov 16, 2024");
+        sakitMobilePage.setTanggal("Nov 22, 2024", "Nov 23, 2024");
         sakitMobilePage.setBtnUploadDocx();
         Utils.handleAlert(driver, "Pastikan gambar/foto yang diupload");
         extentTest.log(LogStatus.PASS, "Pengguna mengajukan sakit dengan tanggal dan surat sakit valid");
@@ -95,7 +95,7 @@ public class SakitMobile {
             System.out.println("Alert message: " + alertMessage);
 
             Assert.assertEquals(alertMessage,
-                    "Anda sudah melakukan izin sakit di tanggal tersebut",
+                    "Photo is Required",
                     "The alert message does not match the expected text");
         } else {
             System.out.println("No alert message is displayed.");

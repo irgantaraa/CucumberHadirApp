@@ -42,7 +42,7 @@ public class IzinPulangCepat {
 
     @When("pengguna memasukkan tanggal yang valid")
     public void pengguna_memasukkan_tanggal_yang_valid() {
-        izinPulangCepat.setTanggal("Nov 12, 2024", "Nov 16, 2024");
+        izinPulangCepat.setTanggal("Nov 1, 2024", "Nov 16, 2024");
         izinPulangCepat.clickSearch();
         extentTest.log(LogStatus.PASS, "Pengguna memasukkan tanggal yang valid");
     }

@@ -29,7 +29,7 @@ Feature: Menampilkan Info Cuti
     Given pengguna telah login ke aplikasi
     When pengguna membuka halaman pengajuan cuti
     And pengguna tidak mengisi tanggal mulai, tanggal selesai, dan catatan
-    When pengguna mengklik tombol "Ajukan"
+    When pengguna klik tombol Ajukan
     Then sistem menampilkan pesan error bahwa tanggal mulai, tanggal selesai, dan catatan harus diisi
 
 # Scenario: 5 - Ajukan cuti dengan memilih tanggal cuti dan field lain kosong TCC.Hadir.04.112

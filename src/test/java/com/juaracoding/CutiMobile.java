@@ -59,7 +59,7 @@ public class CutiMobile {
     public void penggunaMemilihtipeDanMemilihTanggalCuti() {
         cutiMobilePage.clickPernikahanDiriSendiri();
         Utils.delay(3);
-        cutiMobilePage.setTanggal("Nov 17, 2024", "Nov 18, 2024"); // Pilih tanggal cuti
+        cutiMobilePage.setTanggal("Nov 28, 2024", "Nov 29, 2024"); // Pilih tanggal cuti
         Utils.delay(3);
         extentTest.log(LogStatus.PASS,"Pengguna memilih tanggal mulai dan tanggal selesai");
     }
@@ -127,6 +127,11 @@ public class CutiMobile {
     @And("pengguna tidak mengisi tanggal mulai, tanggal selesai, dan catatan")
     public void penggunaMengosongkanSemuaField(){
         cutiMobilePage.clickKhitananPembabtisan();
+    }
+
+    @When("pengguna klik tombol Ajukan")
+    public void penggunaKlikTombolAjukan() {
+        cutiMobilePage.clickAjukan();
     }
 
     @Then("sistem menampilkan pesan error bahwa tanggal mulai, tanggal selesai, dan catatan harus diisi")
