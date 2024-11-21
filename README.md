@@ -2,7 +2,7 @@
 
 ## Overview
 
-Kelompok4HadirApp is a project designed to automate testing for the HadirApp system. It ensures the quality of features such as employee check-ins, login, registration, and data retrieval by using automation testing frameworks like Selenium, TestNG, and Cucumber.
+HadirApp is a project designed to automate testing for the HadirApp system. It ensures the quality of features such as employee check-ins, login, registration, and data retrieval by using automation testing frameworks like Selenium, TestNG, and Cucumber.
 
 ---
 
